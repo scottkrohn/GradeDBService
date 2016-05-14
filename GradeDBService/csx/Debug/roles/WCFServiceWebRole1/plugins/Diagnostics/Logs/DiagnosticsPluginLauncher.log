@@ -1,0 +1,17 @@
+DiagnosticsPluginLauncher.exe Information: 0 : [5/14/2016 11:11:12 PM] Emulator config file set to C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\GradeDBService\csx\Debug\roles\WCFServiceWebRole1\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [5/14/2016 11:11:12 PM] DiagnosticsStoreRootPath set to: C:\Users\skroh\AppData\Local\dftmp\Resources\09610da2-c09c-4faa-b3a8-f6f73bc1da35
+DiagnosticsPluginLauncher.exe Information: 0 : [5/14/2016 11:11:12 PM] Loading config file: C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\GradeDBService\csx\Debug\roles\WCFServiceWebRole1\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [5/14/2016 11:11:12 PM] Config file to read: C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\GradeDBService\csx\Debug\roles\WCFServiceWebRole1\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [5/14/2016 11:11:12 PM] Checking VM Type
+DiagnosticsPluginLauncher.exe Information: 0 : [5/14/2016 11:11:12 PM] Emulator config file set to C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\GradeDBService\csx\Debug\roles\WCFServiceWebRole1\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [5/14/2016 11:11:12 PM] Extension set to Emulator Mode
+DiagnosticsPluginLauncher.exe Information: 0 : [5/14/2016 11:11:12 PM] Reading XML configuration file
+DiagnosticsPluginLauncher.exe Information: 0 : [5/14/2016 11:11:12 PM] Bypassing private config decryption
+DiagnosticsPluginLauncher.exe Information: 0 : [5/14/2016 11:11:12 PM] Stopping the running plugin, if any
+DiagnosticsPluginLauncher.exe Information: 0 : [5/14/2016 11:11:12 PM] No DiagnosticsPlugin is running.
+DiagnosticsPluginLauncher.exe Information: 0 : [5/14/2016 11:11:12 PM] Killing any DiagnosticsPlugin that might remain.
+DiagnosticsPluginLauncher.exe Information: 0 : [5/14/2016 11:11:12 PM] Killing any MonAgentHost that might remain.
+DiagnosticsPluginLauncher.exe Information: 0 : [5/14/2016 11:11:12 PM] Diagnostics plugin stopped successfully
+DiagnosticsPluginLauncher.exe Information: 0 : [5/14/2016 11:11:12 PM] Resetting DiagnosticPlugin
+DiagnosticsPluginLauncher.exe Information: 0 : [5/14/2016 11:12:22 PM] DiagnosticsPlugin launched successfully with new configuration
+DiagnosticsPluginLauncher.exe Information: 0 : [5/14/2016 11:12:22 PM] DiagnosticPlugin exited with code 0
