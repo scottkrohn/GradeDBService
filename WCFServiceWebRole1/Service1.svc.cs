@@ -232,12 +232,23 @@ namespace WCFServiceWebRole1
 			return DatabaseQuery.executeNonQuery(query);
 		}
 
+		/************************************************************
+		 * Delete a single specific WorkItem
+		************************************************************/
 		public bool deleteWorkItem(int assocCourseId, string itemName, string category)
 		{
 			// Replace '+' char with spaces
 			itemName.Replace("+", " ");
 			category.Replace("+", " ");
 			string query = String.Format("DELETE FROM skrohn_gradetracker.work_items WHERE assoc_course_id={0} AND item_name=\"{1}\" AND category_name=\"{2}\"", assocCourseId, itemName, category);
+			return DatabaseQuery.executeNonQuery(query);
+		}
+		/************************************************************
+		 * Delete all WorkItems associated with a specific Course.
+		************************************************************/
+		public bool deleteCourseWorkItems(int courseId)
+		{
+			string query = String.Format("DELETE FROM skrohn_gradetracker.work_items WHERE assoc_course_id={0}", courseId);
 			return DatabaseQuery.executeNonQuery(query);
 		}
 	}

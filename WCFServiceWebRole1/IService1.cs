@@ -63,6 +63,10 @@ namespace WCFServiceWebRole1
 		[WebGet(UriTemplate="deleteWorkItem?id={assocCourseId}&name={itemName}&cat={category}", ResponseFormat=WebMessageFormat.Json)]
 		bool deleteWorkItem(int assocCourseId, string itemName, string category);
 
+		[OperationContract]
+		[WebGet(UriTemplate="deleteCourseWorkItems?id={courseId}", ResponseFormat=WebMessageFormat.Json)]
+		bool deleteCourseWorkItems(int courseId);
+
 	}
 
 	[DataContract]
