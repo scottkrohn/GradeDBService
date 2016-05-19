@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="GradeDBService" generation="1" functional="0" release="0" Id="00c53bf8-ce66-4203-8523-c1337526fb60" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="GradeDBService" generation="1" functional="0" release="0" Id="5805a9b7-8727-4c89-b992-c2e089fc3dc7" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="GradeDBServiceGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -70,9 +70,9 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="dc2f9cca-074d-4923-80a0-5379d31de14e" ref="Microsoft.RedDog.Contract\ServiceContract\GradeDBServiceContract@ServiceDefinition">
+    <implementation Id="6681a2b4-9ee3-498e-af73-f0b04b15088a" ref="Microsoft.RedDog.Contract\ServiceContract\GradeDBServiceContract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="20124c57-dbcc-432a-9868-7823b9d1953d" ref="Microsoft.RedDog.Contract\Interface\WCFServiceWebRole1:Endpoint1@ServiceDefinition">
+        <interfaceReference Id="876c6d2b-6d77-4a16-8c2c-6c749dec6045" ref="Microsoft.RedDog.Contract\Interface\WCFServiceWebRole1:Endpoint1@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/GradeDBService/GradeDBServiceGroup/WCFServiceWebRole1:Endpoint1" />
           </inPort>

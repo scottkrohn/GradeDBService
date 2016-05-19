@@ -221,6 +221,22 @@ namespace WCFServiceWebRole1
 		}
 
 		/************************************************************
+		 * Delete a specified Course. This will also delete all
+		 * associated WorkItems for that course.
+		************************************************************/
+		public bool deleteCourse(int courseId)
+		{
+			string query = String.Format("DELETE FROM skrohn_gradetracker.courses WHERE course_id={0}", courseId);
+			// If Course is successfully delete, delete the WorkItems associated with that course.
+			bool deleteSuccess = DatabaseQuery.executeNonQuery(query);
+			if(deleteSuccess) 
+			{
+				deleteCourseWorkItems(courseId); 
+			}
+			return deleteSuccess;
+		}
+
+		/************************************************************
 		 * Add a work item to a specified Course.
 		************************************************************/
 		public bool addWorkItem(int assocCourseId, string itemName, string category, double pointsPossible, double pointsEarned)
