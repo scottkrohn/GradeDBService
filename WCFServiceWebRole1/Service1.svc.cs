@@ -78,7 +78,7 @@ namespace WCFServiceWebRole1
 		{
 			string queryString = String.Format("INSERT INTO skrohn_gradetracker.students (first_name, last_name, student_id, username, hash_pw) VALUES (\"{0}\", \"{1}\", \"{2}\", \"{3}\", \"{4}\")", firstName, lastName, studentId, username, hashPw);
 
-			return DatabaseQuery.insertQuery(queryString);
+			return DatabaseQuery.executeNonQuery(queryString);
 		}
 
 		/************************************************************
@@ -143,7 +143,7 @@ namespace WCFServiceWebRole1
 		{
 			// Don't dheck if this Semester already exists, allow user to enter duplicate semesters.
 			string query = String.Format("INSERT INTO skrohn_gradetracker.semesters (assoc_student_id, term_name, term_year) VALUES (\"{0}\", \"{1}\", \"{2}\")", studentId, termName, termYear);
-			return DatabaseQuery.insertQuery(query);
+			return DatabaseQuery.executeNonQuery(query);
 		}
 
 		/************************************************************
@@ -190,7 +190,7 @@ namespace WCFServiceWebRole1
 		{
 			// Don't check if course already exists, allow user to add duplicate courses.
 			string query = String.Format("INSERT INTO skrohn_gradetracker.courses (assoc_semester_id, course_code, course_number) VALUES ({0}, \"{1}\", \"{2}\")", assocSemesterId, courseCode, courseNumber);
-			return DatabaseQuery.insertQuery(query);
+			return DatabaseQuery.executeNonQuery(query);
 		}
 
 		/************************************************************
@@ -225,8 +225,20 @@ namespace WCFServiceWebRole1
 		************************************************************/
 		public bool addWorkItem(int assocCourseId, string itemName, string category, double pointsPossible, double pointsEarned)
 		{
+			// Replace '+' char with spaces
+			itemName.Replace("+", " ");
+			category.Replace("+", " ");
 			string query = String.Format("INSERT INTO skrohn_gradetracker.work_items (assoc_course_id, item_name, category_name, points_possible, points_earned) VALUES ({0}, \"{1}\", \"{2}\", {3}, {4})", assocCourseId, itemName, category, pointsPossible, pointsEarned);
-			return DatabaseQuery.insertQuery(query);
+			return DatabaseQuery.executeNonQuery(query);
+		}
+
+		public bool deleteWorkItem(int assocCourseId, string itemName, string category)
+		{
+			// Replace '+' char with spaces
+			itemName.Replace("+", " ");
+			category.Replace("+", " ");
+			string query = String.Format("DELETE FROM skrohn_gradetracker.work_items WHERE assoc_course_id={0} AND item_name=\"{1}\" AND category_name=\"{2}\"", assocCourseId, itemName, category);
+			return DatabaseQuery.executeNonQuery(query);
 		}
 	}
 }

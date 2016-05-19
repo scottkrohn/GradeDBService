@@ -32,7 +32,7 @@ namespace WCFServiceWebRole1
 		}
 
 
-		public static bool insertQuery(string query)
+		public static bool executeNonQuery(string query)
 		{
 			try
 			{
