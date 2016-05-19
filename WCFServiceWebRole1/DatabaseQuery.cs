@@ -32,5 +32,30 @@ namespace WCFServiceWebRole1
 		}
 
 
+		public static bool insertQuery(string query)
+		{
+			try
+			{
+				string connectionInfo = "datasource=scottkrohn.com;port=3306;username=skrohn_root;password=refinnej8!";
+				MySqlConnection myConnection = new MySqlConnection(connectionInfo);
+				MySqlDataAdapter myData = new MySqlDataAdapter();
+				MySqlCommandBuilder cb = new MySqlCommandBuilder(myData);
+				myConnection.Open();
+
+				myData.InsertCommand = new MySqlCommand(query, myConnection);
+				int rowsAffected = myData.InsertCommand.ExecuteNonQuery();
+				myConnection.Close();
+				if (rowsAffected == 0)
+				{
+					throw new Exception("Insert failed.");
+				}
+			}
+			catch (Exception ex)
+			{
+				return false;
+			}
+			return true;
+		}
+
 	}
 }

@@ -22,12 +22,37 @@ namespace WCFServiceWebRole1
 		List<Student> getAllStudents();
 
 		[OperationContract]
+		[WebGet(UriTemplate="addStudent?first={firstName}&last={lastName}&id={studentId}&user={username}&pw={hashpw}", ResponseFormat=WebMessageFormat.Json)]
+		bool addStudent(string firstName, string lastName, string studentId, string username, string hashPw);
+
+		[OperationContract]
 		[WebGet(UriTemplate="getSemester?id={semesterId}", ResponseFormat=WebMessageFormat.Json)]
-		Semester getSemester(string semesterId);
+		Semester getSemester(int semesterId);
 
 		[OperationContract]
 		[WebGet(UriTemplate="getAllSemestersForStudent?id={studentId}", ResponseFormat=WebMessageFormat.Json)]
 		List<Semester> getAllSemestersForStudent(string studentId);
+
+		[OperationContract]
+		[WebGet(UriTemplate="addSemester?studentId={studentId}&termName={termName}&termYear={termYear}", ResponseFormat=WebMessageFormat.Json)]
+		bool addSemester(string studentId, string termName, string termYear); 
+
+		[OperationContract]
+		[WebGet(UriTemplate="getAllCoursesForSemester?id={semesterId}", ResponseFormat=WebMessageFormat.Json)]
+		List<Course> getAllCoursesForSemester(int semesterId);
+		
+		[OperationContract]
+		[WebGet(UriTemplate="addCourse?id={assocSemesterId}&code={courseCode}&num={courseNumber}", ResponseFormat=WebMessageFormat.Json)]
+		bool addCourse(int assocSemesterId, string courseCode, string courseNumber);
+
+		[OperationContract]
+		[WebGet(UriTemplate="getCourseWorkItems?courseId={courseId}", ResponseFormat=WebMessageFormat.Json)]
+		List<WorkItem> getCourseWorkItems(int courseId);
+
+		[OperationContract]
+		[WebGet(UriTemplate="addWorkItem?id={assocCourseId}&name={itemName}&cat={category}&poss={pointsPossible}&earned={pointsEarned}", ResponseFormat=WebMessageFormat.Json)]
+		bool addWorkItem(int assocCourseId, string itemName, string category, double pointsPossible, double pointsEarned);
+
 	}
 
 	[DataContract]
@@ -60,27 +85,38 @@ namespace WCFServiceWebRole1
 	public class Course
 	{
 		[DataMember]
-		public string assocSemesterId;
+		public int assocSemesterId;
 		[DataMember]
 		public string courseCode;	// ie. CSE
 		[DataMember]
 		public string courseNumber;	// ie. 340
 		[DataMember]
-		public string courseId;
+		public int courseId;
+		[DataMember]
+		public Dictionary<String, Double> categories;
 	}
 
 	[DataContract]
 	public class WorkItem
 	{
 		[DataMember]
-		public string assocCourseId;
+		public int assocCourseId;
 		[DataMember]
-		public string name;
+		public string itemName;
 		[DataMember]
 		public string categoryName;
 		[DataMember]
 		public double pointsPossible;
 		[DataMember]
 		public double pointsEarned;
+	}
+
+	[DataContract]
+	public class CategoryWeight
+	{
+		[DataMember]
+		public string categoryName;
+		[DataMember]
+		public int categoryWeight;
 	}
 }

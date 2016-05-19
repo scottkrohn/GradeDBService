@@ -70,10 +70,21 @@ namespace WCFServiceWebRole1
 			}
 			return allStudents;
 		}
+
+		/************************************************************
+		 * Add a new student to the database.
+		************************************************************/
+		public bool addStudent(string firstName, string lastName, string studentId, string username, string hashPw)
+		{
+			string queryString = String.Format("INSERT INTO skrohn_gradetracker.students (first_name, last_name, student_id, username, hash_pw) VALUES (\"{0}\", \"{1}\", \"{2}\", \"{3}\", \"{4}\")", firstName, lastName, studentId, username, hashPw);
+
+			return DatabaseQuery.insertQuery(queryString);
+		}
+
 		/************************************************************
 		 * Return a Semester object given a semester ID.
 		************************************************************/
-		public Semester getSemester(string semesterId)
+		public Semester getSemester(int semesterId)
 		{
 			Semester semester = new Semester();
 			try
@@ -104,7 +115,6 @@ namespace WCFServiceWebRole1
 		public List<Semester> getAllSemestersForStudent(string studentId)
 		{
 			List<Semester> allSemesters = new List<Semester>();
-
 			try
 			{
 				DataTable data = DatabaseQuery.selectQuery(String.Format("SELECT * FROM skrohn_gradetracker.semesters WHERE assoc_student_id={0}", studentId));
@@ -124,6 +134,99 @@ namespace WCFServiceWebRole1
 			}
 			return allSemesters;
 		}
-	}
 
+		/************************************************************
+		 * Add a new semester and associate it with a particular
+		 * student ID.
+		************************************************************/
+		public bool addSemester(string studentId, string termName, string termYear)
+		{
+			// Don't dheck if this Semester already exists, allow user to enter duplicate semesters.
+			string query = String.Format("INSERT INTO skrohn_gradetracker.semesters (assoc_student_id, term_name, term_year) VALUES (\"{0}\", \"{1}\", \"{2}\")", studentId, termName, termYear);
+			return DatabaseQuery.insertQuery(query);
+		}
+
+		/************************************************************
+		 * Return all Courses associated with a particular semester. 
+		************************************************************/
+		public List<Course> getAllCoursesForSemester(int semesterId)
+		{
+			List<Course> courses = new List<Course>();
+			try 
+			{
+				DataTable data = DatabaseQuery.selectQuery(String.Format("SELECT * FROM skrohn_gradetracker.courses WHERE assoc_semester_id={0}", semesterId));
+				for(int i = 0; i < data.Rows.Count; i++)
+				{
+					Course foundCourse = new Course();
+					foundCourse.courseId = Convert.ToInt32(data.Rows[i][0]);
+					foundCourse.assocSemesterId = Convert.ToInt32(data.Rows[i][1]);
+					foundCourse.courseCode = data.Rows[i][2].ToString();
+					foundCourse.courseNumber = data.Rows[i][3].ToString();
+					DataTable categories = DatabaseQuery.selectQuery(String.Format("SELECT * FROM skrohn_gradetracker.weights WHERE assoc_course_id={0}", foundCourse.courseId));
+					
+					// Insert categories/weights into Course objects dictionary of categories
+					foundCourse.categories = new Dictionary<string,double>();
+					foreach (DataRow row in categories.Rows)
+					{
+						foundCourse.categories[row[1].ToString()] = Convert.ToDouble(row[2]);
+					}
+
+					courses.Add(foundCourse);
+				}
+			}
+			catch(Exception ex) 
+			{
+				return null;
+			}
+
+
+			return courses;
+		}
+
+		/************************************************************
+		 * Add a Course to a Specified Semester.
+		************************************************************/
+		public bool addCourse(int assocSemesterId, string courseCode, string courseNumber)
+		{
+			// Don't check if course already exists, allow user to add duplicate courses.
+			string query = String.Format("INSERT INTO skrohn_gradetracker.courses (assoc_semester_id, course_code, course_number) VALUES ({0}, \"{1}\", \"{2}\")", assocSemesterId, courseCode, courseNumber);
+			return DatabaseQuery.insertQuery(query);
+		}
+
+		/************************************************************
+		 * Get all WorkItems for a given Course.
+		************************************************************/
+		public List<WorkItem> getCourseWorkItems(int courseId)
+		{
+			List<WorkItem> workItems = new List<WorkItem>();
+			try
+			{
+				DataTable data = DatabaseQuery.selectQuery(String.Format("SELECT * FROM skrohn_gradetracker.work_items WHERE assoc_course_id={0}", courseId));
+				for (int i = 0; i < data.Rows.Count; i++)
+				{
+					WorkItem item = new WorkItem();
+					item.assocCourseId = Convert.ToInt32(data.Rows[i][0]);
+					item.itemName = data.Rows[i][1].ToString();
+					item.categoryName = data.Rows[i][2].ToString();
+					item.pointsPossible = Convert.ToDouble(data.Rows[i][3]);
+					item.pointsEarned = Convert.ToDouble(data.Rows[i][4]);
+					workItems.Add(item);
+				}
+			}
+			catch (Exception ex) 
+			{
+				return null;
+			}
+			return workItems;
+		}
+
+		/************************************************************
+		 * Add a work item to a specified Course.
+		************************************************************/
+		public bool addWorkItem(int assocCourseId, string itemName, string category, double pointsPossible, double pointsEarned)
+		{
+			string query = String.Format("INSERT INTO skrohn_gradetracker.work_items (assoc_course_id, item_name, category_name, points_possible, points_earned) VALUES ({0}, \"{1}\", \"{2}\", {3}, {4})", assocCourseId, itemName, category, pointsPossible, pointsEarned);
+			return DatabaseQuery.insertQuery(query);
+		}
+	}
 }

@@ -54,6 +54,6 @@ C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\WCFServiceW
 C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\WCFServiceWebRole1\bin\ru\System.Spatial.resources.dll
 C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\WCFServiceWebRole1\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\WCFServiceWebRole1\bin\zh-Hant\System.Spatial.resources.dll
-C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\WCFServiceWebRole1\obj\Debug\WCFServiceWebRole1.csprojResolveAssemblyReference.cache
 C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\WCFServiceWebRole1\obj\Debug\WCFServiceWebRole1.dll
 C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\WCFServiceWebRole1\obj\Debug\WCFServiceWebRole1.pdb
+C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\WCFServiceWebRole1\obj\Debug\WCFServiceWebRole1.csprojResolveAssemblyReference.cache
