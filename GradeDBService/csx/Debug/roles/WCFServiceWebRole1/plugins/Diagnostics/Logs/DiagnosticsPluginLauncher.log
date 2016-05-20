@@ -13,3 +13,5 @@ DiagnosticsPluginLauncher.exe Information: 0 : [5/20/2016 6:41:17 PM] Killing an
 DiagnosticsPluginLauncher.exe Information: 0 : [5/20/2016 6:41:17 PM] Killing any MonAgentHost that might remain.
 DiagnosticsPluginLauncher.exe Information: 0 : [5/20/2016 6:41:17 PM] Diagnostics plugin stopped successfully
 DiagnosticsPluginLauncher.exe Information: 0 : [5/20/2016 6:41:17 PM] Resetting DiagnosticPlugin
+DiagnosticsPluginLauncher.exe Information: 0 : [5/20/2016 6:42:27 PM] DiagnosticsPlugin launched successfully with new configuration
+DiagnosticsPluginLauncher.exe Information: 0 : [5/20/2016 6:42:27 PM] DiagnosticPlugin exited with code 0
