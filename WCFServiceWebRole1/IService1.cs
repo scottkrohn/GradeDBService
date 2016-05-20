@@ -37,11 +37,9 @@ namespace WCFServiceWebRole1
 		[WebGet(UriTemplate="addSemester?studentId={studentId}&termName={termName}&termYear={termYear}", ResponseFormat=WebMessageFormat.Json)]
 		bool addSemester(string studentId, string termName, string termYear); 
 
-		/*
 		[OperationContract]
-		[WebGet(UriTemplate="deleteSemester?id={semesterId}")]
+		[WebGet(UriTemplate="deleteSemester?id={semesterId}", ResponseFormat=WebMessageFormat.Json)]
 		bool deleteSemester(int semesterId);
-		*/
 
 		[OperationContract]
 		[WebGet(UriTemplate="getAllCoursesForSemester?id={semesterId}", ResponseFormat=WebMessageFormat.Json)]
@@ -60,6 +58,10 @@ namespace WCFServiceWebRole1
 		bool deleteCourse(int courseId);
 
 		[OperationContract]
+		[WebGet(UriTemplate="deleteSemesterCourses?id={semesterId}", ResponseFormat = WebMessageFormat.Json)]
+		bool deleteSemesterCourses(int semesterId);
+
+		[OperationContract]
 		[WebGet(UriTemplate="addWorkItem?id={assocCourseId}&name={itemName}&cat={category}&poss={pointsPossible}&earned={pointsEarned}", ResponseFormat=WebMessageFormat.Json)]
 		bool addWorkItem(int assocCourseId, string itemName, string category, double pointsPossible, double pointsEarned);
 
@@ -71,6 +73,13 @@ namespace WCFServiceWebRole1
 		[WebGet(UriTemplate="deleteCourseWorkItems?id={courseId}", ResponseFormat=WebMessageFormat.Json)]
 		bool deleteCourseWorkItems(int courseId);
 
+		[OperationContract]
+		[WebGet(UriTemplate="deleteWeightCategory?id={courseId}&cat={category}", ResponseFormat=WebMessageFormat.Json)]
+		bool deleteWeightCategory(int courseId, string category);
+
+		[OperationContract]
+		[WebGet(UriTemplate="deleteCourseWeights?id={courseId}", ResponseFormat=WebMessageFormat.Json)]
+		bool deleteCourseWeights(int courseId);
 	}
 
 	[DataContract]

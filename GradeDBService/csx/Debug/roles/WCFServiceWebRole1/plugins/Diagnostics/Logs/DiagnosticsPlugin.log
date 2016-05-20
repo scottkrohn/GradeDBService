@@ -1,6 +1,6 @@
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:38 PM] Starting DiagnosticPlugin.exe DiagnosticPlugin-ShutdownEvent DiagnosticPlugin-TotalShutdownEvent -wadVer1v5
-DiagnosticsPlugin.exe Error: 0 : [5/19/2016 11:25:38 PM] Failed to save IIS Directory state
-DiagnosticsPlugin.exe Error: 0 : [5/19/2016 11:25:38 PM] System.Runtime.InteropServices.COMException (0x80040154): Retrieving the COM class factory for component with CLSID {2B72133B-3F5B-4602-8952-803546CE3344} failed due to the following error: 80040154 Class not registered (Exception from HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG)).
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:17 PM] Starting DiagnosticPlugin.exe DiagnosticPlugin-ShutdownEvent DiagnosticPlugin-TotalShutdownEvent -wadVer1v5
+DiagnosticsPlugin.exe Error: 0 : [5/20/2016 6:41:17 PM] Failed to save IIS Directory state
+DiagnosticsPlugin.exe Error: 0 : [5/20/2016 6:41:17 PM] System.Runtime.InteropServices.COMException (0x80040154): Retrieving the COM class factory for component with CLSID {2B72133B-3F5B-4602-8952-803546CE3344} failed due to the following error: 80040154 Class not registered (Exception from HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG)).
    at System.Runtime.Remoting.RemotingServices.AllocateUninitializedObject(RuntimeType objectType)
    at System.Runtime.Remoting.Activation.ActivationServices.CreateInstance(RuntimeType serverType)
    at System.Runtime.Remoting.Activation.ActivationServices.IsCurrentContextOK(RuntimeType serverType, Object[] props, Boolean bNewObj)
@@ -13,18 +13,18 @@ DiagnosticsPlugin.exe Error: 0 : [5/19/2016 11:25:38 PM] System.Runtime.InteropS
    at Microsoft.Web.Administration.ServerManager.get_SitesSection()
    at Microsoft.Web.Administration.ServerManager.get_Sites()
    at Microsoft.Azure.Plugins.Plugin.DiagnosticsPluginManager.SaveIISDirectoryState()
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:38 PM] Starting DiagnosticsPlugin
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:38 PM] Emulator config file set to C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\GradeDBService\csx\Debug\roles\WCFServiceWebRole1\approot\diagnostics.wadcfgx
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:38 PM] DiagnosticsStoreRootPath set to: C:\Users\skroh\AppData\Local\dftmp\Resources\f4f000d2-636e-43a1-83c4-432ac92956a4
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:38 PM] Loading config file: C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\GradeDBService\csx\Debug\roles\WCFServiceWebRole1\approot\diagnostics.wadcfgx
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:38 PM] Config file to read: C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\GradeDBService\csx\Debug\roles\WCFServiceWebRole1\approot\diagnostics.wadcfgx
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:38 PM] Checking VM Type
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:38 PM] Emulator config file set to C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\GradeDBService\csx\Debug\roles\WCFServiceWebRole1\approot\diagnostics.wadcfgx
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:38 PM] Extension set to Emulator Mode
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:38 PM] Reading XML configuration file
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:38 PM] Bypassing private config decryption
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:38 PM] WadCfg is provided in initial configuration. Using that to initialize Diagnostics.
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:38 PM] <PublicConfig xmlns="http://schemas.microsoft.com/ServiceHosting/2010/10/DiagnosticsConfiguration">
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:17 PM] Starting DiagnosticsPlugin
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:17 PM] Emulator config file set to C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\GradeDBService\csx\Debug\roles\WCFServiceWebRole1\approot\diagnostics.wadcfgx
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:17 PM] DiagnosticsStoreRootPath set to: C:\Users\skroh\AppData\Local\dftmp\Resources\b3be068c-9ae3-4140-972f-fe491e46539c
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:17 PM] Loading config file: C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\GradeDBService\csx\Debug\roles\WCFServiceWebRole1\approot\diagnostics.wadcfgx
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:17 PM] Config file to read: C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\GradeDBService\csx\Debug\roles\WCFServiceWebRole1\approot\diagnostics.wadcfgx
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:17 PM] Checking VM Type
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:17 PM] Emulator config file set to C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\GradeDBService\csx\Debug\roles\WCFServiceWebRole1\approot\diagnostics.wadcfgx
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:17 PM] Extension set to Emulator Mode
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:17 PM] Reading XML configuration file
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:17 PM] Bypassing private config decryption
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:17 PM] WadCfg is provided in initial configuration. Using that to initialize Diagnostics.
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:17 PM] <PublicConfig xmlns="http://schemas.microsoft.com/ServiceHosting/2010/10/DiagnosticsConfiguration">
   <WadCfg>
     <DiagnosticMonitorConfiguration overallQuotaInMB="4096">
       <DiagnosticInfrastructureLogs scheduledTransferLogLevelFilter="Error" />
@@ -56,13 +56,13 @@ DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:38 PM] <PublicConfig xml
   </WadCfg>
   <StorageAccount>devstoreaccount1</StorageAccount>
 </PublicConfig>
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:38 PM] Private setting is loaded
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:38 PM] Is config json/xml loaded
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:38 PM] Checking if configuration needs to be fetched from the storage account and doing so if needed.
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:39 PM] Successfully created checkpoint file C:\Users\skroh\AppData\Local\dftmp\Resources\f4f000d2-636e-43a1-83c4-432ac92956a4\WAD0105\Configuration\Checkpoint.txt
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:39 PM] Will use local resource directory C:\Users\skroh\AppData\Local\dftmp\Resources\f4f000d2-636e-43a1-83c4-432ac92956a4\WAD0105
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:39 PM] Will use endpoint https://core.windows.net for storage.
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:39 PM] Exception in creating the ServerManager; is IIS installed?
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:17 PM] Private setting is loaded
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:17 PM] Is config json/xml loaded
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:17 PM] Checking if configuration needs to be fetched from the storage account and doing so if needed.
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:17 PM] Successfully created checkpoint file C:\Users\skroh\AppData\Local\dftmp\Resources\b3be068c-9ae3-4140-972f-fe491e46539c\WAD0105\Configuration\Checkpoint.txt
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:17 PM] Will use local resource directory C:\Users\skroh\AppData\Local\dftmp\Resources\b3be068c-9ae3-4140-972f-fe491e46539c\WAD0105
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:17 PM] Will use endpoint https://core.windows.net for storage.
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:18 PM] Exception in creating the ServerManager; is IIS installed?
  Error:System.Runtime.InteropServices.COMException (0x80040154): Retrieving the COM class factory for component with CLSID {2B72133B-3F5B-4602-8952-803546CE3344} failed due to the following error: 80040154 Class not registered (Exception from HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG)).
    at System.Runtime.Remoting.RemotingServices.AllocateUninitializedObject(RuntimeType objectType)
    at System.Runtime.Remoting.Activation.ActivationServices.CreateInstance(RuntimeType serverType)
@@ -76,6 +76,10 @@ DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:39 PM] Exception in crea
    at Microsoft.Web.Administration.ServerManager.get_SitesSection()
    at Microsoft.Web.Administration.ServerManager.get_Sites()
    at Microsoft.Azure.Plugins.Plugin.WadConfigProcessor.AddDirectories(EventsType mdsEvents, Directories wadDirectories)
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:39 PM] Running in emulator mode, crash dumps not enabled
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:39 PM] Checking to see if Application Insights extension needs to be configured.
-DiagnosticsPlugin.exe Information: 0 : [5/19/2016 11:25:39 PM] In emulator mode and using devstore updating XStoreAccount info, command line args: -LocalPath "C:\Users\skroh\AppData\Local\dftmp\Resources\f4f000d2-636e-43a1-83c4-432ac92956a4\WAD0105"  -ConfigFile "C:\Users\skroh\AppData\Local\dftmp\Resources\f4f000d2-636e-43a1-83c4-432ac92956a4\WAD0105\Configuration\MaConfig.xml" -ShutDownEvent WADDM-ShutDown-d0e904f7885f40ca9469da4f5af73063  -TotalShutDownEvent WADDM-TotalShutDown-d0e904f7885f40ca9469da4f5af73063 -InitializedEvent WADM-StartUp-d0e904f7885f40ca9469da4f5af73063 -parent 12692 -events -wadVer1v5 -UseProxyServer -XStoreAccounts WadAccount#true#devstoreaccount1#Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==#http://127.0.0.1:10002#http://127.0.0.1:10001#http://127.0.0.1:10000
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:18 PM] Running in emulator mode, crash dumps not enabled
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:18 PM] Checking to see if Application Insights extension needs to be configured.
+DiagnosticsPlugin.exe Information: 0 : [5/20/2016 6:41:18 PM] In emulator mode and using devstore updating XStoreAccount info, command line args: -LocalPath "C:\Users\skroh\AppData\Local\dftmp\Resources\b3be068c-9ae3-4140-972f-fe491e46539c\WAD0105"  -ConfigFile "C:\Users\skroh\AppData\Local\dftmp\Resources\b3be068c-9ae3-4140-972f-fe491e46539c\WAD0105\Configuration\MaConfig.xml" -ShutDownEvent WADDM-ShutDown-78ead55396034cd88ded0065a6cd47fa  -TotalShutDownEvent WADDM-TotalShutDown-78ead55396034cd88ded0065a6cd47fa -InitializedEvent WADM-StartUp-78ead55396034cd88ded0065a6cd47fa -parent 4004 -events -wadVer1v5 -UseProxyServer -XStoreAccounts WadAccount#true#devstoreaccount1#Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==#http://127.0.0.1:10002#http://127.0.0.1:10001#http://127.0.0.1:10000
+DiagnosticsPlugin.exe Error: 0 : [5/20/2016 6:41:48 PM] Microsoft.Cis.Monitoring.Query.QueryException: ErrorFail
+   at Microsoft.Cis.Monitoring.Query.QueryLocalTable..ctor(String TableName, String TablePath)
+   at ApplicationInsightsExtension.MATableReader.ReadTableRecords(String tableName, String tablePath, DateTime startTime, DateTime endTime)
+   at Microsoft.Azure.Plugins.Diagnostics.dll.MAStatusWriter.UpdateStatusReport(Object sender, ElapsedEventArgs e)

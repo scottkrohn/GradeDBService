@@ -147,6 +147,27 @@ namespace WCFServiceWebRole1
 		}
 
 		/************************************************************
+		 * Deletes a Semester, as well as all courses associated with
+		 * that semester and all WorkItems associated with each course.
+		************************************************************/
+		public bool deleteSemester(int semesterId)
+		{
+			try
+			{
+				if (!deleteSemesterCourses(semesterId))
+				{
+					return false;
+				}
+				string query = String.Format("DELETE FROM skrohn_gradetracker.semesters WHERE semester_id={0}", semesterId);
+				return DatabaseQuery.executeNonQuery(query);
+			}
+			catch (Exception ex)
+			{
+				return false;
+			}
+		}
+
+		/************************************************************
 		 * Return all Courses associated with a particular semester. 
 		************************************************************/
 		public List<Course> getAllCoursesForSemester(int semesterId)
@@ -231,9 +252,32 @@ namespace WCFServiceWebRole1
 			bool deleteSuccess = DatabaseQuery.executeNonQuery(query);
 			if(deleteSuccess) 
 			{
+				deleteCourseWeights(courseId);
 				deleteCourseWorkItems(courseId); 
 			}
 			return deleteSuccess;
+		}
+
+		/************************************************************
+		 * Delete all Courses associated with a specific Semester.
+		************************************************************/
+		public bool deleteSemesterCourses(int semesterId)
+		{
+			// Get a list of all Courses associated with semesterId
+			List<Course> associatedCourses = new List<Course>();
+			try
+			{
+				DataTable data = DatabaseQuery.selectQuery(String.Format("SELECT * FROM skrohn_gradetracker.courses WHERE assoc_semester_id={0}", semesterId));
+				foreach (DataRow row in data.Rows)
+				{
+					deleteCourse(Convert.ToInt32(row[0]));
+				}
+			}
+			catch (Exception ex)
+			{
+				return false;
+			}
+			return true;
 		}
 
 		/************************************************************
@@ -265,6 +309,18 @@ namespace WCFServiceWebRole1
 		public bool deleteCourseWorkItems(int courseId)
 		{
 			string query = String.Format("DELETE FROM skrohn_gradetracker.work_items WHERE assoc_course_id={0}", courseId);
+			return DatabaseQuery.executeNonQuery(query);
+		}
+
+		public bool deleteWeightCategory(int courseId, string category)
+		{
+			string query = String.Format("DELETE FROM skrohn_gradetracker.weights WHERE assoc_course_id={0} AND category=\"{1}\"", courseId, category);
+			return DatabaseQuery.executeNonQuery(query);
+		}
+
+		public bool deleteCourseWeights(int courseId)
+		{
+			string query = String.Format("DELETE FROM skrohn_gradetracker.weights where assoc_course_id={0}", courseId);
 			return DatabaseQuery.executeNonQuery(query);
 		}
 	}

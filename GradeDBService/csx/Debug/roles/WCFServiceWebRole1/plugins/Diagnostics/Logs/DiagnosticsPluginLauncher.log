@@ -1,15 +1,15 @@
-DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 11:25:38 PM] Emulator config file set to C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\GradeDBService\csx\Debug\roles\WCFServiceWebRole1\approot\diagnostics.wadcfgx
-DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 11:25:38 PM] DiagnosticsStoreRootPath set to: C:\Users\skroh\AppData\Local\dftmp\Resources\f4f000d2-636e-43a1-83c4-432ac92956a4
-DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 11:25:38 PM] Loading config file: C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\GradeDBService\csx\Debug\roles\WCFServiceWebRole1\approot\diagnostics.wadcfgx
-DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 11:25:38 PM] Config file to read: C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\GradeDBService\csx\Debug\roles\WCFServiceWebRole1\approot\diagnostics.wadcfgx
-DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 11:25:38 PM] Checking VM Type
-DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 11:25:38 PM] Emulator config file set to C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\GradeDBService\csx\Debug\roles\WCFServiceWebRole1\approot\diagnostics.wadcfgx
-DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 11:25:38 PM] Extension set to Emulator Mode
-DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 11:25:38 PM] Reading XML configuration file
-DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 11:25:38 PM] Bypassing private config decryption
-DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 11:25:38 PM] Stopping the running plugin, if any
-DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 11:25:38 PM] No DiagnosticsPlugin is running.
-DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 11:25:38 PM] Killing any DiagnosticsPlugin that might remain.
-DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 11:25:38 PM] Killing any MonAgentHost that might remain.
-DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 11:25:38 PM] Diagnostics plugin stopped successfully
-DiagnosticsPluginLauncher.exe Information: 0 : [5/19/2016 11:25:38 PM] Resetting DiagnosticPlugin
+DiagnosticsPluginLauncher.exe Information: 0 : [5/20/2016 6:41:17 PM] Emulator config file set to C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\GradeDBService\csx\Debug\roles\WCFServiceWebRole1\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [5/20/2016 6:41:17 PM] DiagnosticsStoreRootPath set to: C:\Users\skroh\AppData\Local\dftmp\Resources\b3be068c-9ae3-4140-972f-fe491e46539c
+DiagnosticsPluginLauncher.exe Information: 0 : [5/20/2016 6:41:17 PM] Loading config file: C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\GradeDBService\csx\Debug\roles\WCFServiceWebRole1\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [5/20/2016 6:41:17 PM] Config file to read: C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\GradeDBService\csx\Debug\roles\WCFServiceWebRole1\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [5/20/2016 6:41:17 PM] Checking VM Type
+DiagnosticsPluginLauncher.exe Information: 0 : [5/20/2016 6:41:17 PM] Emulator config file set to C:\Users\skroh\Dropbox\Grade Tracker Web App Projects\GradeDBService\GradeDBService\csx\Debug\roles\WCFServiceWebRole1\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [5/20/2016 6:41:17 PM] Extension set to Emulator Mode
+DiagnosticsPluginLauncher.exe Information: 0 : [5/20/2016 6:41:17 PM] Reading XML configuration file
+DiagnosticsPluginLauncher.exe Information: 0 : [5/20/2016 6:41:17 PM] Bypassing private config decryption
+DiagnosticsPluginLauncher.exe Information: 0 : [5/20/2016 6:41:17 PM] Stopping the running plugin, if any
+DiagnosticsPluginLauncher.exe Information: 0 : [5/20/2016 6:41:17 PM] No DiagnosticsPlugin is running.
+DiagnosticsPluginLauncher.exe Information: 0 : [5/20/2016 6:41:17 PM] Killing any DiagnosticsPlugin that might remain.
+DiagnosticsPluginLauncher.exe Information: 0 : [5/20/2016 6:41:17 PM] Killing any MonAgentHost that might remain.
+DiagnosticsPluginLauncher.exe Information: 0 : [5/20/2016 6:41:17 PM] Diagnostics plugin stopped successfully
+DiagnosticsPluginLauncher.exe Information: 0 : [5/20/2016 6:41:17 PM] Resetting DiagnosticPlugin
