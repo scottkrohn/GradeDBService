@@ -303,6 +303,7 @@ namespace WCFServiceWebRole1
 			string query = String.Format("DELETE FROM skrohn_gradetracker.work_items WHERE assoc_course_id={0} AND item_name=\"{1}\" AND category_name=\"{2}\"", assocCourseId, itemName, category);
 			return DatabaseQuery.executeNonQuery(query);
 		}
+
 		/************************************************************
 		 * Delete all WorkItems associated with a specific Course.
 		************************************************************/
@@ -312,12 +313,18 @@ namespace WCFServiceWebRole1
 			return DatabaseQuery.executeNonQuery(query);
 		}
 
+		/************************************************************
+		 * Delete a single entry in the Weights database.
+		************************************************************/
 		public bool deleteWeightCategory(int courseId, string category)
 		{
 			string query = String.Format("DELETE FROM skrohn_gradetracker.weights WHERE assoc_course_id={0} AND category=\"{1}\"", courseId, category);
 			return DatabaseQuery.executeNonQuery(query);
 		}
 
+		/************************************************************
+		 * Delete all weights associated with a specific Course.
+		************************************************************/
 		public bool deleteCourseWeights(int courseId)
 		{
 			string query = String.Format("DELETE FROM skrohn_gradetracker.weights where assoc_course_id={0}", courseId);
